@@ -63,7 +63,7 @@ a {
 
 #tooglePasswordSignUp {
   position: absolute;
-  top: 60%;
+  top: 50%;
   right: 20px;
   width: 25px;
   height: 25px;
@@ -75,7 +75,7 @@ a {
 #tooglePasswordSignUp.hide {
   background: url(/src/assets/images/hidden.png);
   position: absolute;
-  top: 60%;
+  top: 50%;
   right: 20px;
   width: 25px;
   height: 25px;
@@ -303,7 +303,7 @@ a {
   color: white;
 }
 .reset-button {
-  background-color: #f44336;
+  background-color: #008CBA;
   color: white;
 }
 .register-button {

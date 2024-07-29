@@ -1,6 +1,7 @@
 const formulario = document.getElementById("form-login");
 const username = document.getElementById("usuario");
 const senha = document.getElementById("senha");
+const tooglePassword = document.getElementById('tooglePassword')
 
 async function login(logate) {
   try {
@@ -31,12 +32,9 @@ formulario.addEventListener("submit", (event) => {
 });
 
 
-
-const togglePassword = document.getElementById('tooglePassword')
-
 tooglePassword.onclick = function showHide() {
     if (senha.type === 'password') {
-        password.setAttribute('type', 'text');
+        senha.setAttribute('type', 'text');
         tooglePassword.classList.add('hide');
     } else {
         senha.setAttribute('type', 'password')
