@@ -2,6 +2,7 @@ const formLogin = document.getElementById("form-login");
 const nome = document.getElementById("nome");
 const usuario = document.getElementById("usuario");
 const password = document.getElementById("senha");
+const tooglePassword = document.getElementById("tooglePasswordSignUp")
 
 async function signUp(userDados) {
   try {
@@ -28,3 +29,14 @@ formLogin.addEventListener("submit", (event) => {
 
   signUp(userDados);
 });
+
+
+tooglePassword.onclick = function showHide() {
+    if (senha.type === 'password') {
+        password.setAttribute('type', 'text');
+        tooglePassword.classList.add('hide');
+    } else {
+        senha.setAttribute('type', 'password')
+        tooglePassword.classList.remove('hide');
+    };
+};

@@ -18,6 +18,7 @@ async function login(logate) {
   }
 }
 
+
 formulario.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -28,3 +29,17 @@ formulario.addEventListener("submit", (event) => {
 
   login(logate);
 });
+
+
+
+const togglePassword = document.getElementById('tooglePassword')
+
+tooglePassword.onclick = function showHide() {
+    if (senha.type === 'password') {
+        password.setAttribute('type', 'text');
+        tooglePassword.classList.add('hide');
+    } else {
+        senha.setAttribute('type', 'password')
+        tooglePassword.classList.remove('hide');
+    };
+};
