@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastrar - Meus Recados</title>
+    <title>Meus Recados</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/assets/css/styles.css" />
+    <link rel="stylesheet" href="./vendor/css/all.min.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <img class="logo" src="./src/assets/images/logo.svg" alt="" />
+
+        <h1 class="title">Comece já!</h1>
+        <h2 class="subtitle">Cadastre seu recado</h2>
+      </header>
+
+      <main>
+        <form id="form-new-note">
+          <div class="form-control">
+            <label for="title">Título</label>
+            <input
+              type="text"
+              id="title"
+              placeholder="Insira um título para o recado"
+            />
+          </div>
+
+          <div class="form-control">
+            <label for="description">Descrição</label>
+            <textarea type="text" id="description"> </textarea>
+          </div>
+
+          <button class="btn-submit">Cadastrar Recado</button>
+          <button class="btn-submit" type="reset">Limpar campos</button>
+        </form>
+      </main>
+    </div>
+    <<<<<<< HEAD ======= >>>>>>> 81a9953e548c382548b73d8a22b0872e7cc113fd
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/js/api.js"></script>
+    <script src="./src/js/new-note.js"></script>
+  </body>
+</html>
