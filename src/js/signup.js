@@ -2,7 +2,7 @@ const formLogin = document.getElementById("form-login");
 const nome = document.getElementById("nome");
 const usuario = document.getElementById("usuario");
 const password = document.getElementById("senha");
-const tooglePasswordSignUp = document.getElementById("tooglePasswordSignUp")
+const tooglePasswordSignUp = document.getElementById("tooglePasswordSignUp");
 
 async function signUp(userDados) {
   try {
@@ -11,10 +11,10 @@ async function signUp(userDados) {
 
     console.log(token);
     if (response.status === 201) {
-      window.location.href = "login.html";
+    window.location.href = "login.html";
     }
   } catch (error) {
-    console.error("Login Incompleto", error);
+    console.error("Cadastro Incompleto", error);
   }
 }
 
@@ -30,13 +30,12 @@ formLogin.addEventListener("submit", (event) => {
   signUp(userDados);
 });
 
-
 tooglePasswordSignUp.onclick = function showHide() {
-    if (senha.type === 'password') {
-        password.setAttribute('type', 'text');
-        tooglePasswordSignUp.classList.add('hide');
-    } else {
-        senha.setAttribute('type', 'password')
-        tooglePasswordSignUp.classList.remove('hide');
-    };
+  if (senha.type === "password") {
+    password.setAttribute("type", "text");
+    tooglePasswordSignUp.classList.add("hide");
+  } else {
+    senha.setAttribute("type", "password");
+    tooglePasswordSignUp.classList.remove("hide");
+  }
 };

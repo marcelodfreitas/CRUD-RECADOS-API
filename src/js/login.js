@@ -15,7 +15,7 @@ async function login(logate) {
       location.href = "index.html";
     }
   } catch (error) {
-    console.error("Login Incompleto", error);
+    alert("Credenciais Inválidas! Verifique se possui cadastro!", error);
   }
 }
 
