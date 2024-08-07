@@ -14,8 +14,8 @@ async function createNewMessage(note) {
     description.value = "";
 
     window.location.href = "index.html";
-  } catch {
-    console.error("Erro ao cadastrar o recado:", error);
+  } catch (error) {
+    console.error("Erro ao cadastrar o recado:", error.response.data);
   }
 }
 
@@ -29,7 +29,7 @@ formNewNote.addEventListener("submit", (event) => {
   const newNote = {
     title: title.value,
     description: description.value,
-    email: userId,
+    userId
   };
 
   createNewMessage(newNote);

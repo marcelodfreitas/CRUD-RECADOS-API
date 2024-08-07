@@ -1,30 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="./src/assets/css/styles.css">
-    <style>
-        
-    </style>
-</head>
-<body>
-    <div class="login-form">
-        <h2>Login</h2>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/assets/css/styles.css" />
+    <link rel="stylesheet" href="./vendor/css/all.min.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <img class="logo" src="./src/assets/images/logo.svg" alt="" />
+
+        <h1 class="title">Fazer login na sua conta</h1>
+        <h2 class="subtitle">
+          Ainda não tem uma conta?
+          <a href="signup.html">Cadastre-se</a>
+        </h2>
+      </header>
+
+      <main>
         <form id="form-login">
-            <div class="containerToogle">
-            <input id="usuario" type="text" placeholder="exemplo@seudominio.com" required>
-            <input id="senha" type="password" placeholder="Digite sua senha" required>
-            <div id="tooglePassword"></div>
-            <a href="./signup.html"><button type="button" class="reset-button">Cadastre-se</button></a>
-            <button type="submit" class="login-button">Login</button>
-        </div>
+          <div class="form-control">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Insira seu e-mail"
+            />
+
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <i class="fa-solid fa-circle-check"></i>
+            <small></small>
+          </div>
+
+          <div class="form-control">
+            <label for="password">Senha</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Insira sua senha"
+              class=""
+            />
+            <div id="tooglePassword" class=""></div>
+
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <i class="fa-solid fa-circle-check"></i>
+            <small></small>
+          </div>
+
+          <button class="btn-submit" type="submit">Entrar</button>
         </form>
+      </main>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/js/api.js"></script>
     <script src="./src/js/login.js"></script>
-    
-</body>
+  </body>
 </html>

@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -24,10 +25,15 @@ textarea {
 
 a {
   text-decoration: none;
-  color: #087f5b;
-  font-weight: 500;
+  color: #339999;
+  font-weight: 600;
   line-height: 140%;
   letter-spacing: -0.5px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #3ec4c4;
 }
 
 .container {
@@ -39,49 +45,30 @@ a {
   position: relative;
 }
 
-#tooglePassword {
-  position: absolute;
-  top: 35%;
-  right: 20px;
-  width: 25px;
-  height: 25px;
-  background:url(/src/assets/images/eye.png);
-  background-size: cover;
-  cursor: pointer;
-}
-
-#tooglePassword.hide {
-  background: url(/src/assets/images/hidden.png);
-  position: absolute;
-  top: 35%;
-  right: 20px;
-  width: 25px;
-  height: 25px;
-  background-size: cover;
-  cursor: pointer;
-}
-
+#tooglePassword,
 #tooglePasswordSignUp {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  width: 25px;
-  height: 25px;
   background:url(/src/assets/images/eye.png);
+  position: absolute;
+  top: 37%;
+  right: 35px;
+  width: 30px;
+  height: 30px;
   background-size: cover;
   cursor: pointer;
 }
 
+#tooglePassword.hide,
 #tooglePasswordSignUp.hide {
   background: url(/src/assets/images/hidden.png);
   position: absolute;
-  top: 50%;
-  right: 20px;
-  width: 25px;
-  height: 25px;
+  top: 37%;
+  right: 35px;
+  width: 30px;
+  height: 30px;
   background-size: cover;
   cursor: pointer;
 }
+
 
 .header {
   width: 100%;
@@ -158,47 +145,49 @@ a {
 /* Error and Success */
 .form-control.success input,
 .form-control.success textarea {
-  border-color: #2ecc71;
+  border-color: #339999;
 }
 
 .form-control.error input,
 .form-control.error textarea {
-  border-color: #e74c3c;
+  border-color: #ff1900;
 }
 
-.form-control.success i.fa-check-circle {
-  color: #2ecc71;
+.form-control.success i.fa-circle-check {
+  color: #339999;
   visibility: visible;
 }
 
-.form-control.error i.fa-exclamation-circle {
-  color: #e74c3c;
+.form-control.error i.fa-circle-exclamation {
+  color: #ff1900;
   visibility: visible;
 }
 
 .form-control.error small {
   visibility: visible;
-  color: #e74c3c;
+  color: #ff1900;
 }
 
 .btn-submit {
   height: 3.5rem;
-  width: 100%;
+  width: 80%;
+  margin-left: 3.5rem;
   padding: 0px 1.5rem;
   border-radius: 16px;
-  background: #087f5b;
+  background: #339999;
   margin-top: 1.5rem;
   border: 0;
   color: #fff;
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
-
-  transition: ease 0.2s;
+  transition: ease 0.4s;
 }
 
 .btn-submit:hover {
-  background: #0a936a;
+  background: #3ec4c4;
+  
+  
 }
 
 /* Estilos dos cards de recado */
@@ -233,7 +222,7 @@ a {
 }
 
 .card-icons .fa-edit {
-  color: #087f5b;
+  color: #339999;
 }
 
 .card-icons .fa-trash {
@@ -257,18 +246,19 @@ a {
 
 /* Estilo para os botões de página */
 .pagination button {
-  background-color: #087f5b;
+  background-color: #339999;
   color: #fff;
   border: none;
   padding: 10px 15px;
   margin: 0 5px;
   cursor: pointer;
   font-size: 16px;
+  border-radius: 10px;
 }
 
 /* Estilo para o botão de página ativa */
 .pagination button.active {
-  background-color: #0a936a;
+  background-color: #193B02;
 }
 
 
@@ -299,19 +289,48 @@ a {
   
 }
 .login-button {
-  background-color: #4CAF50;
+  background-color: #ADD8E6;
   color: white;
-}
-.reset-button {
-  background-color: #008CBA;
-  color: white;
-}
-.register-button {
-  background-color: #008CBA;
-  color: white;
-  align-content: center;
 }
 
 h3 {
   text-align: center;
+}
+
+.pagination button:disabled {
+  background-color: #d3d3d3; 
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.container-plus {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 15%;
+  height: 30px;
+  color: #ADD8E6;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+  
+}
+
+.container-plus a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  
+}
+
+
+
+.logout,
+.plus {
+  text-align: center;
+}
+
+h4 {
+  font-size: 15px;
+  color: #339999;
 }
